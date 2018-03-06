@@ -11,11 +11,10 @@ import got from 'got'
 	name: 'Testnets',
 })
 export default class Testnets extends Vue {
-	
+
 	created() {
-		got('https://api.github.com/search/code?q=genesis+in:path+repo:tendermint/testnets').then(function(response) {
-			// console.log('response.body', response.body)
-			console.log('typeof response.bodsdssy', typeof response.body)
+		got('https://api.github.com/search/code?q=genesis+in:path+repo:tendermint/testnets', { json: true }).then(function(response) {
+			console.log('response.body', response.body)
 		}).catch(function(error) {
 			console.error('search > error', error)
 		})

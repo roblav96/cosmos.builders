@@ -11,12 +11,12 @@ module.exports = {
 	dll: true,
 	outputDir: 'dist/client',
 
-	css: {
-		extract: true,
-		sourceMap: true,
-		// loaderOptions: {},
-		// modules: true,
-	},
+	// css: {
+	// 	extract: true,
+	// 	sourceMap: true,
+	// 	// loaderOptions: {},
+	// 	// modules: true,
+	// },
 
 	configureWebpack: function(config) {
 		config.watch = true
@@ -45,7 +45,7 @@ module.exports = {
 		// config.plugins.push(new webpack.IgnorePlugin(/electron/))
 		// config.plugins.push(new webpack.IgnorePlugin(/typescript/))
 		// config.plugins.push(new webpack.IgnorePlugin(/server/))
-		config.plugins.push(new webpack.IgnorePlugin(/dist/))
+		// config.plugins.push(new webpack.IgnorePlugin(/dist/))
 		config.plugins.push(new webpack.WatchIgnorePlugin([/node_modules/, /dist/]))
 		config.plugins.push(new LiveReloadPlugin({ appendScriptTag: true }))
 		// config.plugins.push(new BundleAnalyzerPlugin({ analyzerPort: 9999, openAnalyzer: false }))

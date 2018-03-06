@@ -1,4 +1,7 @@
 // 
+@charset 'utf-8';
+// 
+@import './utils';
 // 
 // 
 // $font-prefix: '~@ibm/plex';
@@ -68,6 +71,17 @@ $ibm-color-map: get-colors('all');
 // 		background-color: $color !important;
 // 	}
 // }
+// 
+@each $name,
+$pair in $colors {
+	$color: nth($pair, 1);
+	$color-invert: nth($pair, 2);
+	.bg-#{$name} {
+		color: $color-invert !important;
+		background-color: $color !important;
+	}
+}
+
 // 
 // $primary: $purple;
 // $primary-invert: findColorInvert($primary);

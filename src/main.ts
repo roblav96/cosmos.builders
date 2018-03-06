@@ -1,6 +1,6 @@
 // 
 
-import '@/assets/variables.scss'
+import '@/styles/variables.scss'
 // import 'buefy/lib/buefy.css'
 // import 'mdi/css/materialdesignicons.css'
 

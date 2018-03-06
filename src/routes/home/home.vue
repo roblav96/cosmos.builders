@@ -24,12 +24,12 @@
 					<h2 class="subtitle is-italic is-4">
 						The answer is out there, and it's looking for you, and it will find you if you want it to.
 					</h2>
-					<br>
+					<!-- <br>
 					<p class="has-text-centered">
 						<a class="button is-medium is-info is-outlined">
 							Learn more
 						</a>
-					</p>
+					</p> -->
 				</div>
 			</div>
 		</div>
