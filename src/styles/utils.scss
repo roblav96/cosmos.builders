@@ -1,6 +1,43 @@
 // 
 // 
 // 
+/*████  SPACING  ████*/
+
+$_spacers: 0,
+1,
+2,
+3,
+4,
+5;
+@each $property,
+$letter in (margin: m, padding: p) {
+	@each $size,
+	$length in $_spacers {
+		.#{$letter}-#{$size} {
+			#{$property}: $length !important;
+		}
+		.#{$letter}t-#{$size},
+		.#{$letter}y-#{$size} {
+			#{$property}-top: $length !important;
+		}
+		.#{$letter}r-#{$size},
+		.#{$letter}x-#{$size} {
+			#{$property}-right: $length !important;
+		}
+		.#{$letter}b-#{$size},
+		.#{$letter}y-#{$size} {
+			#{$property}-bottom: $length !important;
+		}
+		.#{$letter}l-#{$size},
+		.#{$letter}x-#{$size} {
+			#{$property}-left: $length !important;
+		}
+	}
+}
+
+// 
+// 
+// 
 /*████  ALIGN  ████*/
 
 .is-align-baseline {
@@ -163,19 +200,19 @@ absolute,
 fixed,
 sticky;
 @each $position in $_positions {
-	.position-#{$position} {
+	.is-position-#{$position} {
 		position: $position !important;
 	}
 }
 
-.fixed-top {
+.is-fixed-top {
 	position: fixed;
 	top: 0;
 	right: 0;
 	left: 0;
 }
 
-.fixed-bottom {
+.is-fixed-bottom {
 	position: fixed;
 	right: 0;
 	bottom: 0;
