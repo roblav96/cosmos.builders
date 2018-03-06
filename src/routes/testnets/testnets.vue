@@ -1,5 +1,5 @@
 <!--  -->
-<script lang="ts" src="./home.ts"></script>
+<script lang="ts" src="./testnets.ts"></script>
 
 <style>
 /*  */
@@ -10,6 +10,6 @@
 
 <template>
     <div>
-
+    	<h1>this is testnets</h1>
     </div>
 </template>

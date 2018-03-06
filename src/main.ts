@@ -1,8 +1,10 @@
 // 
 
-import 'buefy/lib/buefy.css'
-import 'mdi/css/materialdesignicons.css'
+import '@/assets/variables.scss'
+// import 'buefy/lib/buefy.css'
+// import 'mdi/css/materialdesignicons.css'
 
+import * as Vts from 'vue-property-decorator'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Vuex from 'vuex'
@@ -21,6 +23,8 @@ Vue.use(Buefy, {
 	defaultNoticeQueue: false,
 })
 
-import('@/router')
+// Vts.Component.registerHooks(['beforeRouteEnter', 'beforeRouteLeave', 'beforeRouteUpdate'])
+
+require('@/router')
 
 

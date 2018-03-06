@@ -7,10 +7,10 @@ import _ from 'lodash'
 
 
 @Vts.Component({
-	name: 'App',
+	name: 'Home',
 })
-export default class App extends Vue {
-
+export default class Home extends Vue {
+	
 	created() {
 		
 	}
@@ -23,10 +23,6 @@ export default class App extends Vue {
 
 	}
 
-
-
 }
-
-
 
 

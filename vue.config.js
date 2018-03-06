@@ -2,6 +2,7 @@
 
 const path = require('path')
 const webpack = require('webpack')
+const LiveReloadPlugin = require('webpack-livereload-plugin')
 
 
 
@@ -24,6 +25,7 @@ module.exports = {
 		// config.stats = 'errors-only'
 		config.stats = { warnings: false, modules: false, performance: false }
 		// config.stats = false
+		// config.stats = true
 		config.devtool = 'source-map'
 		delete config.node.process
 
@@ -42,16 +44,16 @@ module.exports = {
 
 		// config.plugins.push(new webpack.IgnorePlugin(/electron/))
 		// config.plugins.push(new webpack.IgnorePlugin(/typescript/))
-		// config.plugins.push(new webpack.IgnorePlugin(/dist/))
 		// config.plugins.push(new webpack.IgnorePlugin(/server/))
-		// config.plugins.push(new webpack.WatchIgnorePlugin([/node_modules/, /dist/, /server/]))
+		config.plugins.push(new webpack.IgnorePlugin(/dist/))
+		config.plugins.push(new webpack.WatchIgnorePlugin([/node_modules/, /dist/]))
 		config.plugins.push(new LiveReloadPlugin({ appendScriptTag: true }))
-		config.plugins.push(new BundleAnalyzerPlugin({ analyzerPort: 9999, openAnalyzer: false }))
+		// config.plugins.push(new BundleAnalyzerPlugin({ analyzerPort: 9999, openAnalyzer: false }))
 	},
 
 	chainWebpack: function(config) {
 		// console.log('config.plugins.store', config.plugins.store)
-		// config.plugins.delete('hmr')
+		config.plugins.delete('hmr')
 		config.plugins.delete('no-emit-on-errors')
 		config.plugin('friendly-errors').tap(function(args) {
 			args[0].clearConsole = false
@@ -60,13 +62,5 @@ module.exports = {
 	},
 
 }
-
-// const spinner = ora({
-// 	// text: 'Watching...',
-// 	spinner: 'line',
-// 	color: 'black',
-// 	// hideCursor: false,
-// 	// stream: process.stdout,
-// }).start()
 
 
