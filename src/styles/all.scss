@@ -19,16 +19,18 @@ $white-ter: color($_TINT + '-white', 4);
 $white-bis: color($_TINT + '-white', 2);
 $white: color('white', 0);
 // 
-$cyan: color('aqua', 30);
-$green: color('green', 30);
+$orange: color('peach', 30);
 $yellow: color('gold', 20);
-$red: color('magenta', 50);
+$green: color('green', 30);
+$turquoise: color('teal', 30);
+$cyan: color('aqua', 30);
 $blue: color('blue', 50);
 $purple: color('indigo', 50);
-$orange: color('peach', 30);
+$red: color('magenta', 50);
 // 
-$primary: color('indigo', 50);
-$secondary: color('peach', 30);
+$primary: rgb(151, 89, 209);
+$secondary: rgb(174, 114, 229);
+$accent: rgb(252, 213, 48);
 // 
 $info: $cyan;
 $success: $green;
@@ -38,6 +40,10 @@ $link: $blue;
 // 
 $light: $white-ter;
 $dark: $grey-darker;
+// 
+$text: $grey-dark;
+$text-light: $grey;
+$text-strong: $grey-darker;
 // 
 $cyan-invert: white;
 $green-invert: white;
