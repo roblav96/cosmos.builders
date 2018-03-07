@@ -10,20 +10,15 @@ import App from '@/app/app'
 export const routes = [
 
 	{
-		name: 'home',
-		path: '/',
-		component: () => import('@/routes/home/home'),
+		name: 'home', path: '/', component: () => import('@/routes/home/home'),
 	},
 
 	{
-		name: 'testnets',
-		path: '/testnets',
-		component: () => import('@/routes/testnets/testnets'),
+		name: 'testnets', path: '/testnets', component: () => import('@/routes/testnets/testnets'),
 	},
 
 	{
-		path: '*',
-		redirect: { name: 'testnets' },
+		path: '*', redirect: { name: 'home' },
 	},
 
 ] as Array<RouteConfig>

@@ -2,9 +2,7 @@
 
 <script lang="ts" src="./app.ts"></script>
 
-<style lang="scss" src="@/styles/styles.scss"></style>
-
-
+<style lang="scss" src="@/styles/all.scss"></style>
 
 <style>
 /*  */
@@ -18,8 +16,6 @@ body {
 /*  */
 
 </style>
-
-
 
 <template>
 	<section id="app" class="hero is-fullheight is-bold is-dark">

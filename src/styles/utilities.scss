@@ -1,6 +1,90 @@
 // 
 // 
 // 
+
+/*████  COLORS  ████*/
+
+@each $name,
+$pair in $colors {
+	.is-bg-#{$name} {
+		background-color: nth($pair, 1) !important;
+		color: nth($pair, 2) !important;
+	}
+}
+
+// 
+// 
+// 
+
+/*████  TEXT  ████*/
+
+@each $name,
+$pair in $colors {
+	.is-text-#{$name} {
+		color: nth($pair, 1) !important;
+	}
+}
+
+.is-text-left {
+	text-align: left !important;
+}
+
+.is-text-right {
+	text-align: right !important;
+}
+
+.is-text-center {
+	text-align: center !important;
+}
+
+.is-text-justify {
+	text-align: justify !important;
+}
+
+.is-text-nowrap {
+	white-space: nowrap !important;
+}
+
+.is-text-lowercase {
+	text-transform: lowercase !important;
+}
+
+.is-text-uppercase {
+	text-transform: uppercase !important;
+}
+
+.is-text-capitalize {
+	text-transform: capitalize !important;
+}
+
+.is-text-italic {
+	font-style: italic !important;
+}
+
+.is-text-light {
+	font-weight: $weight-light !important;
+}
+
+.is-text-normal {
+	font-weight: $weight-normal !important;
+}
+
+.is-text-medium {
+	font-weight: $weight-medium !important;
+}
+
+.is-text-semibold {
+	font-weight: $weight-semibold !important;
+}
+
+.is-text-bold {
+	font-weight: $weight-bold !important;
+}
+
+// 
+// 
+// 
+
 /*████  BORDERS  ████*/
 
 .is-border {
@@ -78,29 +162,31 @@
 // 
 // 
 // 
+
 /*████  SPACING  ████*/
 
 $_space: 16;
-$_spaces: 0,
-1,
-2,
-3,
-4,
-5;
+$_spaces: '0',
+'1',
+'2',
+'3',
+'4',
+'5';
+// 
 @function _calcSpace($step) {
-	@if $step==1 {
+	@if $step=='1' {
 		@return $_space * 0.25;
 	}
-	@else if $step==2 {
+	@else if $step=='2' {
 		@return $_space * 0.5;
 	}
-	@else if $step==3 {
+	@else if $step=='3' {
 		@return $_space;
 	}
-	@else if $step==4 {
+	@else if $step=='4' {
 		@return $_space * 1.5;
 	}
-	@else if $step==5 {
+	@else if $step=='5' {
 		@return $_space * 3;
 	}
 	@return 0;
@@ -173,6 +259,7 @@ $letter in (width: w, height: h) {
 // 
 // 
 // 
+
 /*████  ALIGN  ████*/
 
 .is-align-baseline {
@@ -202,6 +289,7 @@ $letter in (width: w, height: h) {
 // 
 // 
 // 
+
 /*████  FLEX  ████*/
 
 .is-flex-row {
@@ -327,6 +415,7 @@ $letter in (width: w, height: h) {
 // 
 // 
 // 
+
 /*████  POSITION  ████*/
 
 $_positions: static,
@@ -334,6 +423,7 @@ relative,
 absolute,
 fixed,
 sticky;
+// 
 @each $position in $_positions {
 	.is-position-#{$position} {
 		position: $position !important;
@@ -357,6 +447,7 @@ sticky;
 // 
 // 
 // 
+
 /*████  SIZING  ████*/
 
 $_sizes: 0,
@@ -364,6 +455,7 @@ $_sizes: 0,
 50,
 75,
 100;
+// 
 @each $size in $_sizes {
 	.is-min-w-#{$size} {
 		min-width: percentage($size/100) !important;
