@@ -22,11 +22,22 @@
 			</div>
 		</div> -->
 		<div class="bd-example">
-			<div class="content is-small">
+			<div class="content">
 				<h1>Hello World</h1>
 
-
-
+				<p class="">
+					<span class="tag is-black -mr-2">Black</span>
+					<span class="tag is-dark -mr-2">Dark</span>
+					<span class="tag is-light -mr-2">Light</span>
+					<span class="tag is-white -mr-2">White</span>
+					<span class="tag is-primary -mr-2">Primary</span>
+					<span class="tag is-link -mr-2">Link</span>
+					<span class="tag is-info -mr-2">Info</span>
+					<span class="tag is-success -mr-2">Success</span>
+					<span class="tag is-warning -mr-2">Warning</span>
+					<span class="tag is-danger -mr-2">Danger</span>
+				</p>
+				
 				<p class="is-text-capitalized">Transforms the first character of each word to uppercase</p>
 				<p class="is-text-lowercase">Transforms all characters to lowercase</p>
 				<p class="is-text-uppercase">Transforms all characters to uppercase</p>

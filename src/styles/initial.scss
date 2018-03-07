@@ -1,0 +1,82 @@
+// 
+// 
+// 
+@import '~ibm-design-colors';
+@import '~bulma/sass/utilities/functions';
+@function ibm-color($palette, $grade: 0, $alpha: 1) {
+	@return rgba(map-get(map-get($__ibm-color-palettes, $palette), $grade), $alpha);
+}
+
+// 
+// $_palette: 'cool-gray';
+// $black: rgba(26, 26, 26, 1);
+// $black-bis: ibm-color($_palette, 90);
+// $black-ter: ibm-color($_palette, 80);
+// $black: rgb(14, 14, 14);
+// $black-bis: rgb(26, 26, 26);
+// $black-ter: rgb(39, 39, 39);
+// // 
+// $_palette: 'cool-gray';
+// $grey-darker: ibm-color($_palette, 80);
+// $grey-dark: ibm-color($_palette, 70);
+// $grey: ibm-color($_palette, 50);
+// $grey-light: ibm-color($_palette, 30);
+// $grey-lighter: ibm-color($_palette, 20);
+// // 
+// $_palette: 'cool-white';
+// $white-ter: ibm-color($_palette, 4);
+// $white-bis: ibm-color($_palette, 2);
+// $white: ibm-color('white', 0);
+// 
+// $orange: ibm-color('peach', 30);
+// $yellow: ibm-color('gold', 20);
+// $green: ibm-color('green', 30);
+// $turquoise: ibm-color('lime', 20);
+// $cyan: ibm-color('aqua', 20);
+// $blue: ibm-color('blue', 40);
+// $purple: ibm-color('indigo', 40);
+// $red: ibm-color('magenta', 40);
+// // 
+// $orange-invert: white;
+// $yellow-invert: white;
+// $green-invert: white;
+// $turquoise-invert: white;
+// $cyan-invert: white;
+// $blue-invert: white;
+// $purple-invert: white;
+// $red-invert: white;
+// 
+// 
+//
+// /*██████████████████████████████
+// █            INVERT            █
+// ██████████████████████████████*/
+// $black: findColorInvert($black);
+// $black-bis: findColorInvert($black-bis);
+// $black-ter: findColorInvert($black-ter);
+// $grey-darker: findColorInvert($grey-darker);
+// $grey-dark: findColorInvert($grey-dark);
+// $grey: findColorInvert($grey);
+// $grey-light: findColorInvert($grey-light);
+// $grey-lighter: findColorInvert($grey-lighter);
+// $white-ter: findColorInvert($white-ter);
+// $white-bis: findColorInvert($white-bis);
+// $white: findColorInvert($white);
+// 
+// $orange: findColorInvert($orange);
+// $yellow: findColorInvert($yellow);
+// $green: findColorInvert($green);
+// $turquoise: findColorInvert($turquoise);
+// $cyan: findColorInvert($cyan);
+// $blue: findColorInvert($blue);
+// $purple: findColorInvert($purple);
+// $red: findColorInvert($red);
+//
+// 
+// 
+$family-sans-serif: ('IBM Plex Sans', BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif);
+$family-monospace: ('IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace);
+// $family-sans-serif: $family-monospace;
+// 
+// 
+//

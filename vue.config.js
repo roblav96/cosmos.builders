@@ -23,22 +23,25 @@ module.exports = {
 
 	vueLoader: {
 		hotReload: false,
-		// extractCSS: true,
+		// extractCSS: false,
 	},
 
-	// css: {
-	// 	extract: true,
-	// 	sourceMap: true,
-	// 	// loaderOptions: {},
-	// 	// modules: true,
-	// },
+	css: {
+		// extract: false,
+		sourceMap: true,
+		// loaderOptions: {},
+		// modules: true,
+	},
 
 	configureWebpack: function(config) {
 		config.watch = true
 		// config.profile = true
 		// config.stats = 'minimal'
 		// config.stats = 'errors-only'
-		config.stats = { warnings: false, modules: false, performance: false }
+		config.stats = {
+			warnings: false, modules: false, performance: false,
+			// excludeAssets: [/fonts/],
+		}
 		// config.stats = false
 		// config.stats = true
 		config.devtool = 'source-map'
