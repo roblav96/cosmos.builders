@@ -15,7 +15,7 @@
 <template>
 	<!-- <router-view></router-view> -->
 	<div id="app" class="">
-		<section class="hero is-medium is-primary is-bold">
+		<section class="hero is-medium is-bold">
 			<div class="hero-head">
 				<nav class="navbar has-shadow is-transparent">
 					<div class="container">
