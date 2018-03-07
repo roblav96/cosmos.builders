@@ -1,7 +1,6 @@
 // 
 // 
 // 
-
 /*████  COLORS  ████*/
 
 @each $name,
@@ -26,7 +25,6 @@ $pair in $colors {
 // 
 // 
 // 
-
 /*████  TEXT  ████*/
 
 ._t-left {
@@ -108,7 +106,6 @@ $pair in $colors {
 // 
 // 
 // 
-
 /*████  BORDERS  ████*/
 
 ._b-1 {
@@ -186,7 +183,6 @@ $pair in $colors {
 // 
 // 
 // 
-
 /*████  SPACING  ████*/
 
 $_space: 16;
@@ -283,7 +279,6 @@ $letter in (width: w, height: h) {
 // 
 // 
 // 
-
 /*████  VERTICAL ALIGN  ████*/
 
 ._va-baseline {
@@ -313,7 +308,6 @@ $letter in (width: w, height: h) {
 // 
 // 
 // 
-
 /*████  DISPLAY  ████*/
 
 ._d-none {
@@ -355,7 +349,6 @@ $letter in (width: w, height: h) {
 // 
 // 
 // 
-
 /*████  FLEX  ████*/
 
 ._fx-row {
@@ -481,7 +474,6 @@ $letter in (width: w, height: h) {
 // 
 // 
 // 
-
 /*████  POSITION  ████*/
 
 $_positions: static,
@@ -513,7 +505,6 @@ sticky;
 // 
 // 
 // 
-
 /*████  SIZING  ████*/
 
 $_sizes: 0,
@@ -546,7 +537,6 @@ $_sizes: 0,
 // 
 // 
 // 
-
 /*████  MISC  ████*/
 
 // 

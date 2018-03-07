@@ -1,7 +1,18 @@
 // 
 @charset 'utf-8';
+@import '~sassy-lists/stylesheets/functions/is-empty';
+@import '~sassy-lists/stylesheets/functions/is-single';
+@import '~sassy-lists/stylesheets/functions/has-multiple-values';
+@import '~sassy-lists/stylesheets/functions/debug';
 @import '~ibm-design-colors';
 @import '~bulma/sass/utilities/functions';
+// 
+// /*████  DEBUG  ████*/
+// 
+@function debug($_VARIABLE) {
+	@return sl-debug($_VARIABLE, true, 1);
+}
+
 // 
 // /*████  COLORS  ████*/
 // 
@@ -26,33 +37,30 @@ $cyan: color('aqua', 30);
 $blue: color('blue', 50);
 $purple: color('indigo', 50);
 $red: color('magenta', 50);
-// 
-$orange-invert: findColorInvert($orange);
-$yellow-invert: findColorInvert($yellow);
-$green-invert: findColorInvert($green);
-$turquoise-invert: findColorInvert($turquoise);
-$cyan-invert: findColorInvert($cyan);
-$blue-invert: findColorInvert($blue);
-$purple-invert: findColorInvert($purple);
-$red-invert: findColorInvert($red);
-// 
-$primary: rgb(151, 89, 209);
-$secondary: rgb(174, 114, 229);
-$accent: rgb(252, 213, 48);
-// 
-$primary-invert: findColorInvert($primary);
-$secondary-invert: findColorInvert($secondary);
-$accent-invert: findColorInvert($accent);
+$orange-invert: white; // findColorInvert($orange);
+$yellow-invert: white; // findColorInvert($yellow);
+$green-invert: white; // findColorInvert($green);
+$turquoise-invert: white; // findColorInvert($turquoise);
+$cyan-invert: white; // findColorInvert($cyan);
+$blue-invert: white; // findColorInvert($blue);
+$purple-invert: white; // findColorInvert($purple);
+$red-invert: white; // findColorInvert($red);
 // 
 $info: $cyan;
 $success: $green;
 $warning: $orange;
 $danger: $red;
+$info-invert: white; // findColorInvert($info);
+$success-invert: white; // findColorInvert($success);
+$warning-invert: white; // findColorInvert($warning);
+$danger-invert: white; // findColorInvert($danger);
 // 
-$info-invert: findColorInvert($info);
-$success-invert: findColorInvert($success);
-$warning-invert: findColorInvert($warning);
-$danger-invert: findColorInvert($danger);
+$primary: rgb(151, 89, 209);
+$secondary: rgb(174, 114, 229);
+$accent: rgb(252, 213, 48);
+$primary-invert: findColorInvert($primary);
+$secondary-invert: findColorInvert($secondary);
+$accent-invert: findColorInvert($accent);
 // 
 // /*████  VARIABLES  ████*/
 // 
@@ -72,17 +80,22 @@ $text-strong: $grey-darker;
 // $link: $blue;
 // $link-invert: findColorInvert($link);
 // 
-// /*████  TYPOGRAPHY  ████*/
+// /*████  FONTS  ████*/
 // 
 $family-sans-serif: ('IBM Plex Sans', BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif);
 $family-primary: $family-sans-serif;
 $family-monospace: ('IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace);
 $family-code: $family-monospace;
 // 
-// /*████  UTILITIES  ████*/
+// /*████  UTILS  ████*/
 // 
 @import '~bulma/sass/utilities/all';
 @import '~buefy/src/scss/utils/all';
+// 
+// /*████  MERGES  ████*/
+// 
+$colors: map-merge($colors, ('secondary':($secondary, $secondary-invert)));
+@debug debug($colors);
 // 
 // /*████  SIZES  ████*/
 // 
