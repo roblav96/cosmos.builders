@@ -19,7 +19,7 @@ $white-ter: color($_TINT + '-white', 4);
 $white-bis: color($_TINT + '-white', 2);
 $white: color('white', 0);
 // 
-$orange: color('peach', 30);
+$orange: color('orange', 30);
 $yellow: color('gold', 20);
 $green: color('green', 30);
 $turquoise: color('teal', 30);
@@ -28,39 +28,56 @@ $blue: color('blue', 50);
 $purple: color('indigo', 50);
 $red: color('magenta', 50);
 // 
+$orange-invert: findColorInvert($orange);
+$yellow-invert: findColorInvert($yellow);
+$green-invert: findColorInvert($green);
+$turquoise-invert: findColorInvert($turquoise);
+$cyan-invert: findColorInvert($cyan);
+$blue-invert: findColorInvert($blue);
+$purple-invert: findColorInvert($purple);
+$red-invert: findColorInvert($red);
+// 
 $primary: rgb(151, 89, 209);
 $secondary: rgb(174, 114, 229);
 $accent: rgb(252, 213, 48);
 // 
+$primary-invert: findColorInvert($primary);
+$secondary-invert: findColorInvert($secondary);
+$accent-invert: findColorInvert($accent);
+// 
 $info: $cyan;
 $success: $green;
-$warning: $yellow;
+$warning: $orange;
 $danger: $red;
-$link: $blue;
+// 
+$info-invert: findColorInvert($info);
+$success-invert: findColorInvert($success);
+$warning-invert: findColorInvert($warning);
+$danger-invert: findColorInvert($danger);
 // 
 $light: $white-ter;
 $dark: $grey-darker;
+$light-invert: $dark;
+$dark-invert: $light;
+// 
+$background: $white-ter;
+$border: $grey-lighter;
+$border-hover: $grey-light;
 // 
 $text: $grey-dark;
 $text-light: $grey;
 $text-strong: $grey-darker;
+$text-invert: findColorInvert($text);
 // 
-$cyan-invert: white;
-$green-invert: white;
-$yellow-invert: white;
-$red-invert: white;
-$blue-invert: white;
-$purple-invert: white;
-$orange-invert: white;
-$primary-invert: white;
-$secondary-invert: white;
-$info-invert: white;
-$success-invert: white;
-$warning-invert: white;
-$danger-invert: white;
-$link-invert: white;
+$link: $blue;
+$link-invert: findColorInvert($link);
 // 
 @import '~bulma/sass/utilities/all';
+// 
+$size-larger: $size-3;
+$size-huge: $size-2;
+$size-gigantic: $size-1;
+// 
 @import '~buefy/src/scss/utils/all';
 // 
 // $body-size: 24px;
