@@ -2,7 +2,7 @@
 
 <script lang="ts" src="./app.ts"></script>
 
-<style lang="scss" src="@/styles/all.scss"></style>
+<style lang="scss" src="@/styles/_all.scss"></style>
 
 <style>
 /*  */
