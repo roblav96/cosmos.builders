@@ -3,8 +3,7 @@
 @import '~ibm-design-colors';
 @import '~bulma/sass/utilities/functions';
 // 
-$family-sans-serif: ('IBM Plex Sans', BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif);
-$family-monospace: ('IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace);
+// /*████  COLORS  ████*/
 // 
 $_TINT: 'cool';
 $black: rgb(14, 14, 14);
@@ -55,32 +54,43 @@ $success-invert: findColorInvert($success);
 $warning-invert: findColorInvert($warning);
 $danger-invert: findColorInvert($danger);
 // 
+// /*████  VARIABLES  ████*/
+// 
 $light: $white-ter;
 $dark: $grey-darker;
-$light-invert: $dark;
-$dark-invert: $light;
 // 
 $background: $white-ter;
+// 
 $border: $grey-lighter;
 $border-hover: $grey-light;
 // 
 $text: $grey-dark;
 $text-light: $grey;
 $text-strong: $grey-darker;
-$text-invert: findColorInvert($text);
+// $text-invert: findColorInvert($text);
 // 
-$link: $blue;
-$link-invert: findColorInvert($link);
+// $link: $blue;
+// $link-invert: findColorInvert($link);
+// 
+// /*████  TYPOGRAPHY  ████*/
+// 
+$family-sans-serif: ('IBM Plex Sans', BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif);
+$family-primary: $family-sans-serif;
+$family-monospace: ('IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace);
+$family-code: $family-monospace;
+// 
+// /*████  UTILITIES  ████*/
 // 
 @import '~bulma/sass/utilities/all';
+@import '~buefy/src/scss/utils/all';
+// 
+// /*████  SIZES  ████*/
 // 
 $size-larger: $size-3;
 $size-huge: $size-2;
 $size-gigantic: $size-1;
 // 
-@import '~buefy/src/scss/utils/all';
-// 
-// $body-size: 24px;
+// /*████  EXTERNALS  ████*/
 // 
 @import './lolo';
 @import '~bulma';
