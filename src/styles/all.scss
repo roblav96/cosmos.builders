@@ -1,0 +1,17 @@
+// 
+@charset 'utf-8';
+@import '~ibm-design-colors';
+// 
+$family-primary: ('IBM Plex Sans', BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif);
+$family-code: ('IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace);
+// 
+$primary: rgb(120, 94, 240);
+// 
+@import '~bulma/sass/utilities/all';
+@import '~buefy/src/scss/utils/all';
+$body-size: 24px;
+// 
+@import './lolo';
+@import '~bulma';
+@import '~buefy/src/scss/buefy';
+//

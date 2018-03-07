@@ -12,6 +12,13 @@ $pair in $colors {
 	}
 }
 
+@each $name,
+$pair in $colors {
+	._t-#{$name} {
+		color: nth($pair, 1) !important;
+	}
+}
+
 ._bg-transparent {
 	background-color: transparent !important;
 }
@@ -21,13 +28,6 @@ $pair in $colors {
 // 
 
 /*████  TEXT  ████*/
-
-@each $name,
-$pair in $colors {
-	._t-#{$name} {
-		color: nth($pair, 1) !important;
-	}
-}
 
 ._t-left {
 	text-align: left !important;
@@ -308,6 +308,48 @@ $letter in (width: w, height: h) {
 
 ._va-text-top {
 	vertical-align: text-top !important;
+}
+
+// 
+// 
+// 
+
+/*████  DISPLAY  ████*/
+
+._d-none {
+	display: none !important;
+}
+
+._d-inline {
+	display: inline !important;
+}
+
+._d-inline-block {
+	display: inline-block !important;
+}
+
+._d-block {
+	display: block !important;
+}
+
+._d-table {
+	display: table !important;
+}
+
+._d-table-row {
+	display: table-row !important;
+}
+
+._d-table-cell {
+	display: table-cell !important;
+}
+
+._d-flex {
+	display: flex !important;
+}
+
+._d-inline-flex {
+	display: inline-flex !important;
 }
 
 // 

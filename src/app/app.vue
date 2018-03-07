@@ -2,7 +2,7 @@
 
 <script lang="ts" src="./app.ts"></script>
 
-<style lang="scss" src="@/styles/_all.scss"></style>
+<style lang="scss" src="@/styles/all.scss"></style>
 
 <style>
 /*  */
@@ -15,7 +15,7 @@
 <template>
 	<!-- <router-view></router-view> -->
 	<div id="app" class="">
-		<section class="hero is-medium is-info is-bold">
+		<section class="hero is-medium is-primary is-bold">
 			<div class="hero-head">
 				<nav class="navbar has-shadow is-transparent">
 					<div class="container">
@@ -35,19 +35,11 @@
 									Home
 								</a>
 								<a class="navbar-item">
-									Examples
+									Testnets
 								</a>
 								<a class="navbar-item">
-									Documentation
+									Explorer
 								</a>
-								<span class="navbar-item">
-									<a class="button is-white is-outlined is-small" href="https://github.com/dansup/bulma-templates/blob/master/templates/hero.html">
-										<span class="icon">
-											<i class="fa fa-github"></i>
-										</span>
-										<span>View Source</span>
-									</a>
-								</span>
 							</div>
 						</div>
 					</div>
