@@ -1,87 +1,58 @@
 // 
 @charset 'utf-8';
+@import '~bulma/sass/utilities/functions';
+// 
+// /*████  FUNCTIONS  ████*/
+// 
 @import '~sassy-lists/stylesheets/functions/is-empty';
 @import '~sassy-lists/stylesheets/functions/is-single';
 @import '~sassy-lists/stylesheets/functions/has-multiple-values';
 @import '~sassy-lists/stylesheets/functions/debug';
-@import '~bulma/sass/utilities/functions';
-@import '~ibm-design-colors';
 // 
-// /*████  DEBUG  ████*/
-// 
-@function debug($_VARIABLE) {
-	@return sl-debug($_VARIABLE, true, 1);
+@function debug($var) {
+	@return sl-debug($var, true, 1);
+}
+
+@function inverted($color) {
+	@if (colorLuminance($color) > 0.55) {
+		@return $dark;
+	}
+	@return $light;
 }
 
 // 
-// /*████  COLORS  ████*/
+// /*████  THEME  ████*/
 // 
-$_TINT: 'cool';
-$black: rgb(14, 14, 14);
-$black-bis: rgb(26, 26, 26);
-$black-ter: rgb(39, 39, 39);
-$grey-darker: color($_TINT + '-gray', 80);
-$grey-dark: color($_TINT + '-gray', 70);
-$grey: color($_TINT + '-gray', 50);
-$grey-light: color($_TINT + '-gray', 30);
-$grey-lighter: color($_TINT + '-gray', 20);
-$white-ter: color($_TINT + '-white', 4);
-$white-bis: color($_TINT + '-white', 2);
-$white: color('white', 0);
+@import './ibm';
+// @import './carbon';
 // 
-$orange: color('orange', 30);
-$yellow: color('gold', 20);
-$green: color('green', 30);
-$turquoise: color('teal', 30);
-$cyan: color('aqua', 30);
-$blue: color('blue', 50);
-$purple: color('indigo', 50);
-$red: color('magenta', 50);
-$orange-invert: white; // findColorInvert($orange);
-$yellow-invert: white; // findColorInvert($yellow);
-$green-invert: white; // findColorInvert($green);
-$turquoise-invert: white; // findColorInvert($turquoise);
-$cyan-invert: white; // findColorInvert($cyan);
-$blue-invert: white; // findColorInvert($blue);
-$purple-invert: white; // findColorInvert($purple);
-$red-invert: white; // findColorInvert($red);
+// /*████  INVERTS  ████*/
 // 
-$info: $cyan;
-$success: $green;
-$warning: $orange;
-$danger: $red;
-$info-invert: white; // findColorInvert($info);
-$success-invert: white; // findColorInvert($success);
-$warning-invert: white; // findColorInvert($warning);
-$danger-invert: white; // findColorInvert($danger);
+$light-invert: $dark;
+$dark-invert: $light;
 // 
-// $primary: color('violet', 50);
-// $secondary: color('violet', 40);
-// $accent: color('yellow', 10);
-$primary: #9855D4;
-$secondary: #AF6EE8;
-$accent: #FDD600;
-$primary-invert: findColorInvert($primary);
-$secondary-invert: findColorInvert($secondary);
-$accent-invert: findColorInvert($accent);
+$orange-invert: inverted($orange);
+$yellow-invert: inverted($yellow);
+$green-invert: inverted($green);
+$turquoise-invert: inverted($turquoise);
+$cyan-invert: inverted($cyan);
+$blue-invert: inverted($blue);
+$purple-invert: inverted($purple);
+$red-invert: inverted($red);
 // 
-// /*████  VARIABLES  ████*/
+$info-invert: inverted($info);
+$success-invert: inverted($success);
+$warning-invert: inverted($warning);
+$danger-invert: inverted($danger);
 // 
-$light: $white-ter;
-$dark: $grey-darker;
+$primary-invert: inverted($primary);
+$primary-light-invert: inverted($primary-light);
+$secondary-invert: inverted($secondary);
+$secondary-light-invert: inverted($secondary-light);
+$accent-invert: inverted($accent);
 // 
-$background: $black-ter;
-// 
-$border: $grey-lighter;
-$border-hover: $grey-light;
-// 
-$text: $grey-dark;
-$text-light: $grey;
-$text-strong: $grey-darker;
-$text-invert: findColorInvert($text);
-// 
-$link: $blue;
-$link-invert: $blue-invert;
+$text-invert: inverted($text);
+$link-invert: inverted($link);
 // 
 // /*████  FONTS  ████*/
 // 
@@ -98,15 +69,12 @@ $family-code: $family-monospace;
 // /*████  MERGES  ████*/
 // 
 $colors: map-merge($colors, ('primary':($primary, $primary-invert)));
+$colors: map-merge($colors, ('primary-light':($primary-light, $primary-light-invert)));
 $colors: map-merge($colors, ('secondary':($secondary, $secondary-invert)));
+$colors: map-merge($colors, ('secondary-light':($secondary-light, $secondary-light-invert)));
 $colors: map-merge($colors, ('accent':($accent, $accent-invert)));
 // 
 // /*████  OTHERS  ████*/
-// 
-$size-larger: $size-3;
-$size-huge: $size-2;
-$size-gigantic: $size-1;
-$breakpoints: ('mobile', 'tablet', 'touch', 'desktop', 'widescreen', 'fullhd');
 // 
 // @debug debug($shades);
 // @debug $background;

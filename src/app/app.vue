@@ -7,7 +7,6 @@
 <style>
 /*  */
 
-
 /*  */
 
 </style>
@@ -15,7 +14,7 @@
 <template>
 	<!-- <router-view></router-view> -->
 	<div id="app" class="">
-		<section class="hero is-medium is-accent">
+		<section class="hero is-medium is-primary">
 			<div class="hero-head">
 				<nav class="navbar has-shadow is-transparent">
 					<div class="container">
@@ -56,15 +55,17 @@
 						aliquip ex ea commodo consequat.
 					</h2>
 
-					<div class="notification is-dark">
-						<a class="button is-primary _mr-2">Primary</a>
-						<a class="button is-secondary _mr-2">Primary</a>
-						<a class="button is-accent _mr-2">Primary</a>
-						<a class="button is-link _mr-2">Link</a>
-						<a class="button is-info _mr-2">Info</a>
-						<a class="button is-success _mr-2">Success</a>
-						<a class="button is-warning _mr-2">Warning</a>
-						<a class="button is-danger _mr-2">Danger</a>
+					<div class="notification is-accent">
+						<button class="button is-primary _mr-2">Primary</button>
+						<button class="button is-primary-light _mr-2">Primary Light</button>
+						<button class="button is-secondary _mr-2">Secondary</button>
+						<button class="button is-secondary-light _mr-2">Secondary Light</button>
+						<button class="button is-accent _mr-2">Accent</button>
+						<button class="button is-link _mr-2">Link</button>
+						<button class="button is-info _mr-2">Info</button>
+						<button class="button is-success _mr-2">Success</button>
+						<button class="button is-warning _mr-2">Warning</button>
+						<button class="button is-danger _mr-2">Danger</button>
 					</div>
 
 				</div>

@@ -1,7 +1,17 @@
 // 
+// /*████  VARIABLES  ████*/
 // 
+$_breakpoints: ('mobile', 'tablet', 'touch', 'desktop', 'widescreen', 'fullhd');
 // 
-/*████  COLORS  ████*/
+// /*████  COLORS  ████*/
+// 
+:root {
+	@each $name,
+	$pair in $colors {
+		--_c-#{$name}: nth($pair, 1);
+		--_c-#{$name}-inverse: nth($pair, 2);
+	}
+}
 
 @each $name,
 $pair in $colors {
@@ -11,21 +21,19 @@ $pair in $colors {
 	}
 }
 
+._bg-transparent {
+	background-color: transparent !important;
+}
+
+// 
+// /*████  TEXT  ████*/
+// 
 @each $name,
 $pair in $colors {
 	._t-#{$name} {
 		color: nth($pair, 1) !important;
 	}
 }
-
-._bg-transparent {
-	background-color: transparent !important;
-}
-
-// 
-// 
-// 
-/*████  TEXT  ████*/
 
 ._t-left {
 	text-align: left !important;
@@ -104,10 +112,8 @@ $pair in $colors {
 }
 
 // 
+// /*████  BORDERS  ████*/
 // 
-// 
-/*████  BORDERS  ████*/
-
 ._b-1 {
 	border: 1px solid $border !important;
 }
@@ -181,18 +187,10 @@ $pair in $colors {
 }
 
 // 
+// /*████  SPACING  ████*/
 // 
-// 
-/*████  SPACING  ████*/
-
 $_space: 16;
-$_spaces: 0,
-1,
-2,
-3,
-4,
-5;
-// 
+$_spaces: (0, 1, 2, 3, 4, 5);
 @function _calcSpace($step) {
 	@if $step==1 {
 		@return $_space * 0.25;
@@ -277,10 +275,8 @@ $letter in (width: w, height: h) {
 }
 
 // 
+// /*████  VERTICAL ALIGN  ████*/
 // 
-// 
-/*████  VERTICAL ALIGN  ████*/
-
 ._va-baseline {
 	vertical-align: baseline !important;
 }
@@ -306,10 +302,8 @@ $letter in (width: w, height: h) {
 }
 
 // 
+// /*████  DISPLAY  ████*/
 // 
-// 
-/*████  DISPLAY  ████*/
-
 ._d-none {
 	display: none !important;
 }
@@ -347,10 +341,8 @@ $letter in (width: w, height: h) {
 }
 
 // 
+// /*████  FLEX  ████*/
 // 
-// 
-/*████  FLEX  ████*/
-
 ._fx-row {
 	flex-direction: row !important;
 }
@@ -472,16 +464,9 @@ $letter in (width: w, height: h) {
 }
 
 // 
+// /*████  POSITION  ████*/
 // 
-// 
-/*████  POSITION  ████*/
-
-$_positions: static,
-relative,
-absolute,
-fixed,
-sticky;
-// 
+$_positions: (static, relative, absolute, fixed, sticky);
 @each $position in $_positions {
 	._p-#{$position} {
 		position: $position !important;
@@ -503,16 +488,9 @@ sticky;
 }
 
 // 
+// /*████  SIZING  ████*/
 // 
-// 
-/*████  SIZING  ████*/
-
-$_sizes: 0,
-25,
-50,
-75,
-100;
-// 
+$_sizes: (0, 25, 50, 75, 100);
 @each $size in $_sizes {
 	._min-w-#{$size} {
 		min-width: percentage($size/100) !important;
@@ -535,10 +513,6 @@ $_sizes: 0,
 }
 
 // 
-// 
-// 
-/*████  MISC  ████*/
-
-// 
+// /*████  MISC  ████*/
 // 
 //
