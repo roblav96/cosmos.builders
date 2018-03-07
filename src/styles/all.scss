@@ -55,12 +55,12 @@ $success-invert: white; // findColorInvert($success);
 $warning-invert: white; // findColorInvert($warning);
 $danger-invert: white; // findColorInvert($danger);
 // 
-$primary: rgb(158, 86, 208);
-$secondary: rgb(181, 110, 227);
-$accent: rgb(255, 213, 59);
 // $primary: color('violet', 50);
 // $secondary: color('violet', 40);
 // $accent: color('yellow', 10);
+$primary: #9855D4;
+$secondary: #AF6EE8;
+$accent: #FDD600;
 $primary-invert: findColorInvert($primary);
 $secondary-invert: findColorInvert($secondary);
 $accent-invert: findColorInvert($accent);
