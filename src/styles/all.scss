@@ -4,8 +4,8 @@
 @import '~sassy-lists/stylesheets/functions/is-single';
 @import '~sassy-lists/stylesheets/functions/has-multiple-values';
 @import '~sassy-lists/stylesheets/functions/debug';
-@import '~ibm-design-colors';
 @import '~bulma/sass/utilities/functions';
+@import '~ibm-design-colors';
 // 
 // /*████  DEBUG  ████*/
 // 
@@ -55,9 +55,12 @@ $success-invert: white; // findColorInvert($success);
 $warning-invert: white; // findColorInvert($warning);
 $danger-invert: white; // findColorInvert($danger);
 // 
-$primary: rgb(151, 89, 209);
-$secondary: rgb(174, 114, 229);
-$accent: rgb(252, 213, 48);
+$primary: rgb(158, 86, 208);
+$secondary: rgb(181, 110, 227);
+$accent: rgb(255, 213, 59);
+// $primary: color('violet', 50);
+// $secondary: color('violet', 40);
+// $accent: color('yellow', 10);
 $primary-invert: findColorInvert($primary);
 $secondary-invert: findColorInvert($secondary);
 $accent-invert: findColorInvert($accent);
@@ -67,7 +70,7 @@ $accent-invert: findColorInvert($accent);
 $light: $white-ter;
 $dark: $grey-darker;
 // 
-$background: $white-ter;
+$background: $black-ter;
 // 
 $border: $grey-lighter;
 $border-hover: $grey-light;
@@ -75,10 +78,10 @@ $border-hover: $grey-light;
 $text: $grey-dark;
 $text-light: $grey;
 $text-strong: $grey-darker;
-// $text-invert: findColorInvert($text);
+$text-invert: findColorInvert($text);
 // 
-// $link: $blue;
-// $link-invert: findColorInvert($link);
+$link: $blue;
+$link-invert: $blue-invert;
 // 
 // /*████  FONTS  ████*/
 // 
@@ -94,14 +97,19 @@ $family-code: $family-monospace;
 // 
 // /*████  MERGES  ████*/
 // 
+$colors: map-merge($colors, ('primary':($primary, $primary-invert)));
 $colors: map-merge($colors, ('secondary':($secondary, $secondary-invert)));
-@debug debug($colors);
+$colors: map-merge($colors, ('accent':($accent, $accent-invert)));
 // 
-// /*████  SIZES  ████*/
+// /*████  OTHERS  ████*/
 // 
 $size-larger: $size-3;
 $size-huge: $size-2;
 $size-gigantic: $size-1;
+$breakpoints: ('mobile', 'tablet', 'touch', 'desktop', 'widescreen', 'fullhd');
+// 
+// @debug debug($shades);
+// @debug $background;
 // 
 // /*████  EXTERNALS  ████*/
 // 

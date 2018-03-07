@@ -15,7 +15,7 @@
 <template>
 	<!-- <router-view></router-view> -->
 	<div id="app" class="">
-		<section class="hero is-medium is-bold">
+		<section class="hero is-medium is-accent">
 			<div class="hero-head">
 				<nav class="navbar has-shadow is-transparent">
 					<div class="container">
@@ -32,7 +32,7 @@
 						<div id="navbarMenu" class="navbar-menu">
 							<div class="navbar-end">
 								<a class="navbar-item is-active">
-									Home
+									Homes
 								</a>
 								<a class="navbar-item">
 									Testnets
@@ -58,6 +58,8 @@
 
 					<div class="notification is-dark">
 						<a class="button is-primary _mr-2">Primary</a>
+						<a class="button is-secondary _mr-2">Primary</a>
+						<a class="button is-accent _mr-2">Primary</a>
 						<a class="button is-link _mr-2">Link</a>
 						<a class="button is-info _mr-2">Info</a>
 						<a class="button is-success _mr-2">Success</a>
