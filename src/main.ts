@@ -1,6 +1,13 @@
 // 
 
-import '@/styles/variables.scss'
+global.NODE_ENV = process.env.NODE_ENV as any
+global.DEVELOPMENT = NODE_ENV == 'development'
+global.PRODUCTION = NODE_ENV == 'production'
+global.DOMAIN = 'https://' + (DEVELOPMENT ? 'dev.' : '') + 'cosmos.builders'
+
+// 
+
+// import '@/styles/variables.scss'
 // import 'buefy/lib/buefy.css'
 // import 'mdi/css/materialdesignicons.css'
 
@@ -10,9 +17,11 @@ import VueRouter from 'vue-router'
 import Vuex from 'vuex'
 import Buefy from 'buefy'
 
+
+
 Vue.config.devtools = false
-Vue.config.productionTip = false
-Vue.config.performance = false
+// Vue.config.productionTip = false
+// Vue.config.performance = false
 
 Vue.use(VueRouter)
 Vue.use(Vuex)

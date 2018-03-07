@@ -3,7 +3,6 @@
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
 import store from '@/services/store'
-
 import App from '@/app/app'
 
 
@@ -12,7 +11,7 @@ export const routes = [
 
 	{
 		name: 'home',
-		path: '/home',
+		path: '/',
 		component: () => import('@/routes/home/home'),
 	},
 

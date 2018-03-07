@@ -5,20 +5,25 @@ eyes.defaults.maxLength = 131072
 const webpack = require('webpack')
 const LiveReloadPlugin = require('webpack-livereload-plugin')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
-// const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin')
 // const ExtractTextPlugin = require('extract-text-webpack-plugin')
+// const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin')
+
+
+
+global.NODE_ENV = process.env.NODE_ENV
+global.DEVELOPMENT = NODE_ENV == 'development'
+global.PRODUCTION = NODE_ENV == 'production'
+
 // const styles = new ExtractTextPlugin('style.css')
-
-
 
 module.exports = {
 
 	dll: true,
 	outputDir: 'dist/client',
-	
+
 	vueLoader: {
-		// extractCSS: styles,
 		hotReload: false,
+		// extractCSS: true,
 	},
 
 	// css: {
@@ -42,8 +47,14 @@ module.exports = {
 		// let templated = '[name]' // '[hash].[name].[id].[query]'
 		// config.output.filename = templated + '.bundle.js'
 		// config.output.chunkFilename = templated + '.chunk.js'
-		config.output.filename = '[name].bundle.js'
-		config.output.chunkFilename = '[name].chunk.js'
+		if (DEVELOPMENT) {
+			config.output.filename = '[name].bundle.js'
+			config.output.chunkFilename = 'chunk.[name].js'
+		}
+		if (PRODUCTION) {
+			config.output.filename = '[name].bundle.[hash].js'
+			config.output.chunkFilename = '[chunkhash].chunk.[hash].js'
+		}
 
 		config.plugins.push(new webpack.optimize.CommonsChunkPlugin({
 			name: 'vendors', minChunks: module => module.context && module.context.includes('node_modules'),
@@ -63,6 +74,7 @@ module.exports = {
 		config.plugins.push(new LiveReloadPlugin({ appendScriptTag: true }))
 		// config.plugins.push(new BundleAnalyzerPlugin({ analyzerPort: 9999, openAnalyzer: false }))
 		// config.plugins.push(styles)
+		// config.plugins.push(new ExtractTextPlugin('style.css'))
 		// config.plugins.push(new HtmlWebpackHarddiskPlugin())
 	},
 

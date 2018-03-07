@@ -1,5 +1,10 @@
 <!--  -->
+
 <script lang="ts" src="./app.ts"></script>
+
+<style lang="scss" src="@/styles/variables.scss"></style>
+
+
 
 <style>
 /*  */
@@ -9,7 +14,12 @@ body {
 	overflow-y: auto;
 }
 
+
+/*  */
+
 </style>
+
+
 
 <template>
 	<section id="app" class="hero is-fullheight is-bold is-dark">
@@ -18,7 +28,7 @@ body {
 				<div class="container">
 					<div class="navbar-brand">
 						<router-link class="navbar-item" :to="'home'">
-							<img src="@/assets/mind-map.svg" alt="Logo">
+							<img src="@/assets/mind-map.svg">
 							<p style="font-size: 18px; font-weight: 400; margin-left: 12px; line-height: 1.2;">Cosmos Builders</p>
 						</router-link>
 					</div>
