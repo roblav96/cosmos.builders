@@ -1,43 +1,103 @@
 // 
 // 
 // 
+
 /*████  SPACING  ████*/
 
-$_spacers: 0,
+$_spacer: 16;
+$_spaces: 0,
 1,
 2,
 3,
 4,
 5;
+@function _calcSpace($space) {
+	@if $space==1 {
+		@return $_spacer * 0.25;
+	}
+	@else if $space==2 {
+		@return $_spacer * 0.5;
+	}
+	@else if $space==3 {
+		@return $_spacer;
+	}
+	@else if $space==4 {
+		@return $_spacer * 1.5;
+	}
+	@else if $space==5 {
+		@return $_spacer * 3;
+	}
+	@return 0;
+}
+
 @each $property,
 $letter in (margin: m, padding: p) {
-	@each $size,
-	$length in $_spacers {
-		.#{$letter}-#{$size} {
-			#{$property}: $length !important;
+	@each $space in $_spaces {
+		.#{$letter}-#{$space} {
+			#{$property}: _calcSpace($space) + px !important;
 		}
-		.#{$letter}t-#{$size},
-		.#{$letter}y-#{$size} {
-			#{$property}-top: $length !important;
+		.#{$letter}t-#{$space},
+		.#{$letter}y-#{$space} {
+			#{$property}-top: _calcSpace($space) + px !important;
 		}
-		.#{$letter}r-#{$size},
-		.#{$letter}x-#{$size} {
-			#{$property}-right: $length !important;
+		.#{$letter}r-#{$space},
+		.#{$letter}x-#{$space} {
+			#{$property}-right: _calcSpace($space) + px !important;
 		}
-		.#{$letter}b-#{$size},
-		.#{$letter}y-#{$size} {
-			#{$property}-bottom: $length !important;
+		.#{$letter}b-#{$space},
+		.#{$letter}y-#{$space} {
+			#{$property}-bottom: _calcSpace($space) + px !important;
 		}
-		.#{$letter}l-#{$size},
-		.#{$letter}x-#{$size} {
-			#{$property}-left: $length !important;
+		.#{$letter}l-#{$space},
+		.#{$letter}x-#{$space} {
+			#{$property}-left: _calcSpace($space) + px !important;
 		}
+	}
+}
+
+.m-auto {
+	margin: auto !important;
+}
+
+.mt-auto,
+.my-auto {
+	margin-top: auto !important;
+}
+
+.mr-auto,
+.mx-auto {
+	margin-right: auto !important;
+}
+
+.mb-auto,
+.my-auto {
+	margin-bottom: auto !important;
+}
+
+.ml-auto,
+.mx-auto {
+	margin-left: auto !important;
+}
+
+@each $property,
+$letter in (width: w, height: h) {
+	@each $space in $_spaces {
+		.#{$letter}-#{$space} {
+			#{$property}: _calcSpace($space) + px !important;
+		}
+	}
+}
+
+@each $space in $_spaces {
+	.is-lh-#{$space} {
+		line-height: 1 + ($space/10) !important;
 	}
 }
 
 // 
 // 
 // 
+
 /*████  ALIGN  ████*/
 
 .is-align-baseline {
@@ -67,6 +127,7 @@ $letter in (margin: m, padding: p) {
 // 
 // 
 // 
+
 /*████  FLEX  ████*/
 
 .is-flex-row {
@@ -192,6 +253,7 @@ $letter in (margin: m, padding: p) {
 // 
 // 
 // 
+
 /*████  POSITION  ████*/
 
 $_positions: static,
@@ -222,6 +284,7 @@ sticky;
 // 
 // 
 // 
+
 /*████  SIZING  ████*/
 
 $_sizes: 0,

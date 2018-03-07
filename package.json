@@ -1,5 +1,6 @@
 {
 	"scripts": {
+		"r": "npm run start",
 		"start": "rm -rf dist/client && cross-env NODE_ENV=development webpack --config node_modules/@vue/cli-service/webpack.config.js",
 		"build": "vue-cli-service build",
 		"postinstall": "rm -rf node_modules/vuex/types/vue.d.ts"
@@ -9,7 +10,7 @@
 		"buefy": "latest",
 		"bulma": "latest",
 		"got": "latest",
-		"ibm-design-colors": "^2.0.4",
+		"ibm-design-colors": "latest",
 		"lodash": "latest",
 		"mdi": "latest",
 		"moment": "latest",
@@ -25,9 +26,12 @@
 		"@vue/cli-plugin-typescript": "latest",
 		"@vue/cli-service": "latest",
 		"cross-env": "latest",
+		"dts-gen": "latest",
+		"eyes": "latest",
 		"node-sass": "latest",
 		"sass-loader": "latest",
 		"vue-template-compiler": "latest",
+		"webpack-bundle-analyzer": "latest",
 		"webpack-livereload-plugin": "latest"
 	}
 }

@@ -1,8 +1,13 @@
 // 
 
-const path = require('path')
+const eyes = require('eyes')
+eyes.defaults.maxLength = 131072
 const webpack = require('webpack')
 const LiveReloadPlugin = require('webpack-livereload-plugin')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+// const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin')
+// const ExtractTextPlugin = require('extract-text-webpack-plugin')
+// const styles = new ExtractTextPlugin('style.css')
 
 
 
@@ -10,6 +15,11 @@ module.exports = {
 
 	dll: true,
 	outputDir: 'dist/client',
+	
+	vueLoader: {
+		// extractCSS: styles,
+		hotReload: false,
+	},
 
 	// css: {
 	// 	extract: true,
@@ -49,6 +59,8 @@ module.exports = {
 		config.plugins.push(new webpack.WatchIgnorePlugin([/node_modules/, /dist/]))
 		config.plugins.push(new LiveReloadPlugin({ appendScriptTag: true }))
 		// config.plugins.push(new BundleAnalyzerPlugin({ analyzerPort: 9999, openAnalyzer: false }))
+		// config.plugins.push(styles)
+		// config.plugins.push(new HtmlWebpackHarddiskPlugin())
 	},
 
 	chainWebpack: function(config) {
@@ -59,6 +71,12 @@ module.exports = {
 			args[0].clearConsole = false
 			return args
 		})
+		// config.plugin('html').tap(function(args) {
+		// 	// args[0].hash = true
+		// 	args[0].alwaysWriteToDisk = true
+		// 	eyes.inspect(args[0], 'args[0]')
+		// 	return args
+		// })
 	},
 
 }
