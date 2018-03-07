@@ -39,8 +39,11 @@ module.exports = {
 		config.devtool = 'source-map'
 		delete config.node.process
 
+		// let templated = '[name]' // '[hash].[name].[id].[query]'
+		// config.output.filename = templated + '.bundle.js'
+		// config.output.chunkFilename = templated + '.chunk.js'
 		config.output.filename = '[name].bundle.js'
-		config.output.chunkFilename = '[name].chunk.js'
+		config.output.chunkFilename = 'chunk.[name].js'
 
 		config.plugins.push(new webpack.optimize.CommonsChunkPlugin({
 			name: 'vendors', minChunks: module => module.context && module.context.includes('node_modules'),

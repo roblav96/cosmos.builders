@@ -1,7 +1,6 @@
 // 
 @charset 'utf-8';
 // 
-@import './utils';
 // 
 // 
 // $font-prefix: '~@ibm/plex';
@@ -115,6 +114,8 @@ $pair in $colors {
 // $red: #000000;
 // 
 // 
+// 
+@import './utilities';
 // 
 @import '~bulma';
 @import '~buefy/src/scss/buefy';

@@ -1,31 +1,107 @@
 // 
 // 
 // 
+/*████  BORDERS  ████*/
 
+.is-border {
+	border: 1px solid $border !important;
+}
+
+.is-border-top {
+	border-top: 1px solid $border !important;
+}
+
+.is-border-right {
+	border-right: 1px solid $border !important;
+}
+
+.is-border-bottom {
+	border-bottom: 1px solid $border !important;
+}
+
+.is-border-left {
+	border-left: 1px solid $border !important;
+}
+
+.is-border-0 {
+	border: 0 !important;
+}
+
+.is-border-top-0 {
+	border-top: 0 !important;
+}
+
+.is-border-right-0 {
+	border-right: 0 !important;
+}
+
+.is-border-bottom-0 {
+	border-bottom: 0 !important;
+}
+
+.is-border-left-0 {
+	border-left: 0 !important;
+}
+
+.is-border-radius {
+	border-radius: $radius !important;
+}
+
+.is-border-radius-top {
+	border-top-left-radius: $radius !important;
+	border-top-right-radius: $radius !important;
+}
+
+.is-border-radius-right {
+	border-top-right-radius: $radius !important;
+	border-bottom-right-radius: $radius !important;
+}
+
+.is-border-radius-bottom {
+	border-bottom-right-radius: $radius !important;
+	border-bottom-left-radius: $radius !important;
+}
+
+.is-border-radius-left {
+	border-top-left-radius: $radius !important;
+	border-bottom-left-radius: $radius !important;
+}
+
+.is-border-radius-circle {
+	border-radius: 50% !important;
+}
+
+.is-border-radius-0 {
+	border-radius: 0 !important;
+}
+
+// 
+// 
+// 
 /*████  SPACING  ████*/
 
-$_spacer: 16;
+$_space: 16;
 $_spaces: 0,
 1,
 2,
 3,
 4,
 5;
-@function _calcSpace($space) {
-	@if $space==1 {
-		@return $_spacer * 0.25;
+@function _calcSpace($step) {
+	@if $step==1 {
+		@return $_space * 0.25;
 	}
-	@else if $space==2 {
-		@return $_spacer * 0.5;
+	@else if $step==2 {
+		@return $_space * 0.5;
 	}
-	@else if $space==3 {
-		@return $_spacer;
+	@else if $step==3 {
+		@return $_space;
 	}
-	@else if $space==4 {
-		@return $_spacer * 1.5;
+	@else if $step==4 {
+		@return $_space * 1.5;
 	}
-	@else if $space==5 {
-		@return $_spacer * 3;
+	@else if $step==5 {
+		@return $_space * 3;
 	}
 	@return 0;
 }
@@ -33,56 +109,56 @@ $_spaces: 0,
 @each $property,
 $letter in (margin: m, padding: p) {
 	@each $space in $_spaces {
-		.#{$letter}-#{$space} {
+		.is-#{$letter}-#{$space} {
 			#{$property}: _calcSpace($space) + px !important;
 		}
-		.#{$letter}t-#{$space},
-		.#{$letter}y-#{$space} {
+		.is-#{$letter}t-#{$space},
+		.is-#{$letter}y-#{$space} {
 			#{$property}-top: _calcSpace($space) + px !important;
 		}
-		.#{$letter}r-#{$space},
-		.#{$letter}x-#{$space} {
+		.is-#{$letter}r-#{$space},
+		.is-#{$letter}x-#{$space} {
 			#{$property}-right: _calcSpace($space) + px !important;
 		}
-		.#{$letter}b-#{$space},
-		.#{$letter}y-#{$space} {
+		.is-#{$letter}b-#{$space},
+		.is-#{$letter}y-#{$space} {
 			#{$property}-bottom: _calcSpace($space) + px !important;
 		}
-		.#{$letter}l-#{$space},
-		.#{$letter}x-#{$space} {
+		.is-#{$letter}l-#{$space},
+		.is-#{$letter}x-#{$space} {
 			#{$property}-left: _calcSpace($space) + px !important;
 		}
 	}
 }
 
-.m-auto {
+.is-m-auto {
 	margin: auto !important;
 }
 
-.mt-auto,
-.my-auto {
+.is-mt-auto,
+.is-my-auto {
 	margin-top: auto !important;
 }
 
-.mr-auto,
-.mx-auto {
+.is-mr-auto,
+.is-mx-auto {
 	margin-right: auto !important;
 }
 
-.mb-auto,
-.my-auto {
+.is-mb-auto,
+.is-my-auto {
 	margin-bottom: auto !important;
 }
 
-.ml-auto,
-.mx-auto {
+.is-ml-auto,
+.is-mx-auto {
 	margin-left: auto !important;
 }
 
 @each $property,
 $letter in (width: w, height: h) {
 	@each $space in $_spaces {
-		.#{$letter}-#{$space} {
+		.is-#{$letter}-#{$space} {
 			#{$property}: _calcSpace($space) + px !important;
 		}
 	}
@@ -97,7 +173,6 @@ $letter in (width: w, height: h) {
 // 
 // 
 // 
-
 /*████  ALIGN  ████*/
 
 .is-align-baseline {
@@ -127,7 +202,6 @@ $letter in (width: w, height: h) {
 // 
 // 
 // 
-
 /*████  FLEX  ████*/
 
 .is-flex-row {
@@ -253,7 +327,6 @@ $letter in (width: w, height: h) {
 // 
 // 
 // 
-
 /*████  POSITION  ████*/
 
 $_positions: static,
@@ -284,30 +357,30 @@ sticky;
 // 
 // 
 // 
-
 /*████  SIZING  ████*/
 
 $_sizes: 0,
 25,
 50,
+75,
 100;
 @each $size in $_sizes {
-	.min-w-#{$size} {
+	.is-min-w-#{$size} {
 		min-width: percentage($size/100) !important;
 	}
-	.max-w-#{$size} {
+	.is-max-w-#{$size} {
 		max-width: percentage($size/100) !important;
 	}
-	.w-#{$size} {
+	.is-w-#{$size} {
 		width: percentage($size/100) !important;
 	}
-	.min-h-#{$size} {
+	.is-min-h-#{$size} {
 		min-height: percentage($size/100) !important;
 	}
-	.max-h-#{$size} {
+	.is-max-h-#{$size} {
 		max-height: percentage($size/100) !important;
 	}
-	.h-#{$size} {
+	.is-h-#{$size} {
 		height: percentage($size/100) !important;
 	}
 }
