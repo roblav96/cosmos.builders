@@ -40,7 +40,7 @@ module.exports = {
 		// config.stats = 'errors-only'
 		config.stats = {
 			warnings: false, modules: false, performance: false,
-			// excludeAssets: [/fonts/],
+			excludeAssets: [/fonts\//, /img\//],
 		}
 		// config.stats = false
 		// config.stats = true
