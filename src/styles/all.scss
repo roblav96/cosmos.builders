@@ -1,9 +1,9 @@
 // 
 @charset 'utf-8';
-@import '~bulma/sass/utilities/functions';
 // 
 // /*████  FUNCTIONS  ████*/
 // 
+@import '~bulma/sass/utilities/functions';
 @import '~sassy-lists/stylesheets/functions/is-empty';
 @import '~sassy-lists/stylesheets/functions/is-single';
 @import '~sassy-lists/stylesheets/functions/has-multiple-values';
@@ -23,8 +23,7 @@
 // 
 // /*████  THEME  ████*/
 // 
-@import './ibm';
-// @import './carbon';
+@import './theme';
 // 
 // /*████  INVERTS  ████*/
 // 
@@ -74,25 +73,16 @@ $colors: map-merge($colors, ('secondary':($secondary, $secondary-invert)));
 $colors: map-merge($colors, ('secondary-light':($secondary-light, $secondary-light-invert)));
 $colors: map-merge($colors, ('accent':($accent, $accent-invert)));
 // 
-// /*████  OTHERS  ████*/
-// 
-// @debug debug($shades);
-// @debug $background;
-// 
 // /*████  EXTERNALS  ████*/
 // 
 @import './lolo';
 @import '~bulma';
 @import '~buefy/src/scss/buefy';
 // 
+// /*████  DEBUG  ████*/
 // 
-// 
-// $font-prefix: '~@ibm/plex';
-// @import '~@ibm/plex/scss/sans/index';
-// @import '~@ibm/plex/scss/mono/index';
-// // 
-// $mdi-font-path: '~mdi/fonts';
-// @import '~mdi/scss/materialdesignicons';
+// @debug debug($title-color);
+// @debug debug($shades);
 // 
 // 
 //
