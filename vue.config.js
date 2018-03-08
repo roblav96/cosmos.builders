@@ -31,7 +31,7 @@ module.exports = {
 		config.watch = true
 		config.stats = {
 			warnings: false, performance: false, modules: false,
-			// excludeAssets: [/fonts\//, /img\//],
+			excludeAssets: [/img\//, /media\//, /fonts\//],
 		}
 		config.devtool = 'source-map'
 		delete config.node.process
