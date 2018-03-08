@@ -7,6 +7,7 @@
 <style>
 /*  */
 
+
 /*  */
 
 </style>
@@ -66,6 +67,15 @@
 						<button class="button is-success _mr-2">Success</button>
 						<button class="button is-warning _mr-2">Warning</button>
 						<button class="button is-danger _mr-2">Danger</button>
+					</div>
+
+					<div class="notification is-accent">
+						<b-icon icon="account" size="is-large" type="is-success">
+						</b-icon>
+						<b-icon icon="home" size="is-large" type="is-info">
+						</b-icon>
+						<b-icon icon="view-dashboard" size="is-large" type="is-primary">
+						</b-icon>
 					</div>
 
 				</div>

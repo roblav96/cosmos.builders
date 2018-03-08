@@ -84,4 +84,15 @@ $colors: map-merge($colors, ('accent':($accent, $accent-invert)));
 @import './lolo';
 @import '~bulma';
 @import '~buefy/src/scss/buefy';
+// 
+// 
+// 
+// $font-prefix: '~@ibm/plex';
+// @import '~@ibm/plex/scss/sans/index';
+// @import '~@ibm/plex/scss/mono/index';
+// // 
+// $mdi-font-path: '~mdi/fonts';
+// @import '~mdi/scss/materialdesignicons';
+// 
+// 
 //

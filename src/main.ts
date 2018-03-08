@@ -9,6 +9,7 @@ global.DOMAIN = 'https://' + (DEVELOPMENT ? 'dev.' : '') + 'cosmos.builders'
 
 import '@ibm/plex/css/ibm-plex.css'
 import 'mdi/css/materialdesignicons.css'
+// import '@/styles/fonts.scss'
 
 import * as Vts from 'vue-property-decorator'
 import Vue from 'vue'
