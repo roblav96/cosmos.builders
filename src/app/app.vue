@@ -7,7 +7,6 @@
 <style>
 /*  */
 
-
 /*  */
 
 </style>
@@ -15,30 +14,31 @@
 <template>
 	<!-- <router-view></router-view> -->
 	<div id="app" class="">
+		<nav class="navbar is-fixed-top has-shadow is-accent">
+			<div class="container">
+				<div class="navbar-brand">
+					<a class="navbar-item">
+						<img src="@/assets/feather-white.svg">
+					</a>
+				</div>
+				<div id="navbarMenu" class="navbar-menu">
+					<div class="navbar-end">
+						<a class="navbar-item is-active">
+							Homes
+						</a>
+						<a class="navbar-item">
+							Testnets
+						</a>
+						<a class="navbar-item">
+							Explorer
+						</a>
+					</div>
+				</div>
+			</div>
+		</nav>
 		<section class="hero is-fullheight is-bold is-primary">
 			<div class="hero-head">
-				<nav class="navbar has-shadow is-accent">
-					<div class="container">
-						<div class="navbar-brand">
-							<a class="navbar-item" href="../">
-								<img src="http://bulma.io/images/bulma-type-white.png" alt="Logo">
-							</a>
-						</div>
-						<div id="navbarMenu" class="navbar-menu">
-							<div class="navbar-end">
-								<a class="navbar-item is-active">
-									Homes
-								</a>
-								<a class="navbar-item">
-									Testnets
-								</a>
-								<a class="navbar-item">
-									Explorer
-								</a>
-							</div>
-						</div>
-					</div>
-				</nav>
+
 			</div>
 			<div class="hero-body">
 				<div class="container has-text-centered">
